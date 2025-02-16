@@ -69,12 +69,12 @@ const leaders: TeamMember[] = [
     ]
   },
   {
-    avatar: 'https://github.com/TrisuyaN.png',
-    name: 'TrisuyaN',
+    avatar: 'https://github.com/rurumuri.png',
+    name: 'rurumuri',
     desc: 'to save the 瓦鲁多',
     title: '开发部副主席',
     links: [
-      { icon: 'github', link: 'https://github.com/TrisuyaN' }
+      { icon: 'github', link: 'https://github.com/rurumuri' }
     ]
   },
   {
