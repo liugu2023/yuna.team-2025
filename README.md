@@ -1,11 +1,9 @@
-
 <img src="https://yuna2017.github.io/yuna.team/logo-doubleline.svg" alt="燕山大学学生网络信息协会" style="padding: 40px 0;"/>
-
 
 [访问官网](http://yuna.team/) | [加入我们](http://yuna.team/join-us/how-to.html) | [English README](https://github.com/yuna2017/yuna.team/blob/main/README_en.md)
 
 > [!NOTE]
->	此页面中存在需要长期更新的内容及资料列表，现存条目中资料未必是最新。
+> 此页面中存在需要长期更新的内容及资料列表，现存条目中资料未必是最新。
 > 本页面最后更新时间：2025/02/17
 
 ## 关于协会
