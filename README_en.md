@@ -1,8 +1,10 @@
-# Yanshan University Student Net Information Association
+<img src="https://yuna2017.github.io/yuna.team/logo-doubleline.svg" alt="Yanshan University Student Net Information Association" style="padding: 40px 0;"/>
 
-[Visit Website](https://yuna.team/) | [Join Us](https://yuna.team/join-us/how-to.html) | [中文介绍](https://github.com/yuna2017/yuna.team/blob/main/README.md)
+[Visit Website](http://yuna.team/) | [Join Us](http://yuna.team/join-us/how-to.html) | [中文介绍](https://github.com/yuna2017/yuna.team/blob/main/README.md)
 
-This is the repository for the official website of the Yanshan University Student Net Information Association (YUNA), built with VitePress.
+> [!NOTE]
+> This page contains content and resource lists that require regular updates. Existing entries may not reflect the most current information.
+> Last updated: 2025/02/17
 
 ## About the Association
 
@@ -12,7 +14,7 @@ The Yanshan University Student Net Information Association (YUNA) is a student o
 
 - **Development Department**: The core work of this department is web development, but it also covers other areas of computer science. We offer training in front-end and back-end development and promote innovative projects beyond traditional systems. We also have extensive experience in server operations, high-performance computing, and system design.
 
-  - **Web Development**: Members can learn HTML, CSS, JavaScript, and other web frameworks (such as Flask, Django) while participating in personal or school-based projects. We focus not only on traditional management systems but also on creative projects.
+  - **Web Development**: Members can learn HTML, CSS, JavaScript, and other web frameworks (such as Flask, Django) while participating in personal or school-based projects. We focus not only on traditional management systems but also on creative projects (~~including the development department's recruitment management system~~).
 
   - **Server Operations**: The development department maintains the association's "YunRen" server, which runs the PVE virtualization platform with Ubuntu, Windows Server, and other systems. This server supports projects like cloud note services, campus VPN services, and the 503 Hub IoT platform, offering members practical technical experience.
 
@@ -23,7 +25,6 @@ The Yanshan University Student Net Information Association (YUNA) is a student o
   - **CTF Competitions**: We offer opportunities for students passionate about cybersecurity and CTF to compete and learn. Through challenges like Misc and Crypto, members can develop the ability to identify and exploit vulnerabilities, and many have already won awards in competitions.
 
 - **Operations Department**: This department assists the university's IT center with server management, ensuring the stability of critical infrastructure.
-
 - **Publicity Department**: Responsible for promotional materials.
 - **Secretariat**: Manages documentation and administrative tasks.
 
@@ -36,7 +37,7 @@ We regularly host tech lectures, hackathons, and social events to foster collabo
 If you're a student at Yanshan University and interested in joining YUNA, please follow these steps:
 
 1. Join our 2024 recruitment QQ group: 837114441.
-2. Introduce yourself briefly in the group and express your interest.
+2. Introduce yourself briefly in the group and express your interest (~~and chat with us~~).
 3. Wait for the official recruitment period to begin.
 
 We welcome students from all backgrounds and experience levels, as long as you share a passion for technology. Join us to become part of this exciting community and grow together!
@@ -46,4 +47,4 @@ We welcome students from all backgrounds and experience levels, as long as you s
 If you have any questions or feedback, feel free to reach out:
 
 - GitHub: [yuna2017/yuna.team](https://github.com/yuna2017/yuna.team)
-- Website: [https://yuna.team](https://yuna.team)
+- Website: [http://yuna.team](http://yuna.team)

@@ -1,8 +1,12 @@
-# 燕山大学学生网络信息协会
 
-[访问官网](https://yuna.team/) | [加入我们](https://yuna.team/join-us/how-to.html) | [English README](https://github.com/yuna2017/yuna.team/blob/main/README_en.md)
+<img src="https://yuna2017.github.io/yuna.team/logo-doubleline.svg" alt="燕山大学学生网络信息协会" style="padding: 40px 0;"/>
 
-这是燕山大学学生网络信息协会 (YUNA) [官方网站](https://yuna.team/)的仓库，采用 VitePress 构建。
+
+[访问官网](http://yuna.team/) | [加入我们](http://yuna.team/join-us/how-to.html) | [English README](https://github.com/yuna2017/yuna.team/blob/main/README_en.md)
+
+> [!NOTE]
+>	此页面中存在需要长期更新的内容及资料列表，现存条目中资料未必是最新。
+> 本页面最后更新时间：2025/02/17
 
 ## 关于协会
 
@@ -23,13 +27,6 @@
   - **CTF 比赛**：我们为热爱网络安全和 CTF 的同学提供了竞赛和学习的机会。通过 Misc、Crypto 等各类题型的挑战，培养学员发现并利用漏洞的能力，已有多名成员在竞赛中获奖。
   
 - **运维部**：运维部协助学校信息中心进行各类服务器的运维工作，保障基础设施的稳定运行。
-
-  - **硬件设备管理**：运维部负责协会内硬件设备的管理和维护，包括服务器、路由器、交换机等。
-
-  - **软件技术支持**：维护服务器上操作系统、数据库的正常运转。宣传和推动软件正版化工作，推广国产信创软件。
-
-  - **Linux系统与虚拟化技术**：维护服务器上的Linux虚拟机，例如网安靶机、作品展示网页。
-
 - **组宣部**：分管宣传物料等。
 - **秘书处**：疏通关系、处理文档等事务。
 
@@ -52,5 +49,5 @@
 
 如果你有任何疑问或反馈,欢迎随时与我们联系:
 
-- GitHub: [yuna2017/yuna.team](https://github.com/yuna2017/yuna.team)
-- 网站: [https://yuna.team](https://yuna.team)
+- GitHub: [yuna2017/yuna.team](http://github.com/yuna2017/yuna.team)
+- 网站: [http://yuna.team](http://yuna.team)
