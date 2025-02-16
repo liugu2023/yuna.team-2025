@@ -6,6 +6,8 @@ import {
   VPTeamPageSection
 } from 'vitepress/theme'
 
+import { withBase } from 'vitepress'
+
 interface SocialLink {
   icon: SocialLinkIcon
   link: string
@@ -89,7 +91,7 @@ const leaders: TeamMember[] = [
 ]
 
 function getAvatars(name: string): string {
-  return '/avatars/' + name + '.png';
+  return withBase('/avatars/' + name + '.png');
 }
 
 function emailIcon(email: string) {
