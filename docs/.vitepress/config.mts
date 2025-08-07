@@ -42,6 +42,10 @@ export default withMermaid({
         ]
       },
       {
+        text: '最新动态',
+        link: '/placeholder'
+      },
+      {
         text: '加入我们',
         link: '/join-us/how-to.html'
       }
