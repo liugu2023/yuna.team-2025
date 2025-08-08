@@ -16,6 +16,9 @@ hero:
       text: 了解更多
       link: /about-us
     - theme: alt
+      text: 最新动态
+      link: /placeholder.html
+    - theme: alt
       text: 加入我们
       link: /join-us/how-to.html
 

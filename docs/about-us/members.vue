@@ -160,7 +160,39 @@ const secretariat: TeamMember[] = [
 
 ]
 
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+
+const currentSession = ref('eighth')
+
+function switchSession(session: string) {
+  currentSession.value = session
+}
+
+const eighthSessionData = {
+  leaders,
+  devbranch,
+  cybersec,
+  opergroup,
+  publicity,
+  secretariat
+}
+
+const ninthSessionData = {
+  leaders: [] as TeamMember[],
+  devbranch: [] as TeamMember[],
+  cybersec: [] as TeamMember[],
+  opergroup: [] as TeamMember[],
+  publicity: [] as TeamMember[],
+  secretariat: [] as TeamMember[]
+}
+
+const currentMembers = computed(() => {
+  return currentSession.value === 'eighth' ? eighthSessionData : ninthSessionData
+})
+
+const currentSessionTitle = computed(() => {
+  return currentSession.value === 'eighth' ? '第八届燕山大学大学生网络信息协会' : '第九届燕山大学大学生网络信息协会'
+})
 
 const friends = ref([
   {
@@ -202,49 +234,65 @@ fetch(['https://v1.hitokoto.cn/?c=a', 'https://v1.hitokoto.cn/?c=d',
         协会成员
       </template>
       <template #lead>
-        第八届燕山大学大学生网络信息协会
+        {{ currentSessionTitle }}
+        <div style="margin-top: 16px;">
+          <button 
+            @click="switchSession('eighth')"
+            :class="{ 'active': currentSession === 'eighth' }"
+            class="session-btn"
+          >
+            第八届
+          </button>
+          <button 
+            @click="switchSession('ninth')"
+            :class="{ 'active': currentSession === 'ninth' }"
+            class="session-btn"
+          >
+            第九届
+          </button>
+        </div>
       </template>
     </VPTeamPageTitle>
     <VPTeamPageSection>
       <template #title>主席团</template>
       <!-- <template #lead></template> -->
       <template #members>
-        <VPTeamMembers :members="leaders" />
+        <VPTeamMembers :members="currentMembers.leaders" />
       </template>
     </VPTeamPageSection>
     <VPTeamPageSection>
       <template #title>开发部</template>
       <!-- <template #lead></template> -->
       <template #members>
-        <VPTeamMembers size="small" :members="devbranch" />
+        <VPTeamMembers size="small" :members="currentMembers.devbranch" />
       </template>
     </VPTeamPageSection>
     <VPTeamPageSection>
       <template #title>网络安全部</template>
       <!-- <template #lead></template> -->
       <template #members>
-        <VPTeamMembers size="small" :members="cybersec" />
+        <VPTeamMembers size="small" :members="currentMembers.cybersec" />
       </template>
     </VPTeamPageSection>
     <VPTeamPageSection>
       <template #title>运维部</template>
       <!-- <template #lead></template> -->
       <template #members>
-        <VPTeamMembers size="small" :members="opergroup" />
+        <VPTeamMembers size="small" :members="currentMembers.opergroup" />
       </template>
     </VPTeamPageSection>
     <VPTeamPageSection>
       <template #title>组宣部</template>
       <!-- <template #lead></template> -->
       <template #members>
-        <VPTeamMembers size="small" :members="publicity" />
+        <VPTeamMembers size="small" :members="currentMembers.publicity" />
       </template>
     </VPTeamPageSection>
     <VPTeamPageSection>
       <template #title>秘书处</template>
       <!-- <template #lead></template> -->
       <template #members>
-        <VPTeamMembers size="small" :members="secretariat" />
+        <VPTeamMembers size="small" :members="currentMembers.secretariat" />
       </template>
     </VPTeamPageSection>
     <VPTeamPageSection>
@@ -256,3 +304,23 @@ fetch(['https://v1.hitokoto.cn/?c=a', 'https://v1.hitokoto.cn/?c=d',
     </VPTeamPageSection>
   </VPTeamPage>
 </template>
+
+<style scoped>
+.session-btn {
+  margin: 0 4px;
+  padding: 6px 12px;
+  border: 1px solid var(--vp-c-brand-1);
+  background: transparent;
+  color: var(--vp-c-brand-1);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.session-btn:hover,
+.session-btn.active {
+  background: var(--vp-c-brand-1);
+  color: var(--vp-c-white);
+}
+</style>
