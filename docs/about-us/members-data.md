@@ -84,6 +84,22 @@ opergroup:
         email: "3078919738@qq.com"
       - icon: "github"
         link: "https://github.com/liugu2023"
+
+  - avatar: "/avatars/泽澜.jpg"
+    name: "泽澜"
+    desc: ""
+    title: "运维部部长"
+    links:
+      - icon: "qq"
+        uin: "1905728641"
+
+  - avatar: "/avatars/Summer.jpg"
+    name: "Summer"
+    desc: "喵"
+    title: "运维部部长"
+    links:
+      - icon: "email"
+        email: "starrymore@outlook.com"
 ```
 
 ### 组宣部
@@ -102,7 +118,14 @@ publicity:
 ### 秘书处
 
 ```yaml
-secretariat: []
+secretariat: 
+  - avatar: "/avatars/高聪颖.jpg"
+    name: "高聪颖"
+    desc: ""
+    title: "秘书处部长"
+    links:
+      - icon: "qq"
+        uin: "321841503"
 ```
 
 ## 特邀成员
