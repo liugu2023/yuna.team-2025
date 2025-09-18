@@ -7,7 +7,7 @@ import {
 } from 'vitepress/theme'
 
 import { withBase } from 'vitepress'
-import { data as membersData, type MembersData } from './members-data.data'
+import { data as oldMembersData, type OldMembersData } from './old-members-data.data'
 
 interface SocialLink {
   icon: SocialLinkIcon
@@ -60,8 +60,8 @@ interface TeamMember {
   actionText?: string
 }
 
-// 类型断言，告诉 TypeScript membersData 的实际类型
-const data = membersData as unknown as MembersData
+// 类型断言，告诉 TypeScript oldMembersData 的实际类型
+const data = oldMembersData as unknown as OldMembersData
 
 const leaders: TeamMember[] = processMembers(data.leaders)
 const devbranch: TeamMember[] = processMembers(data.devbranch)
@@ -69,6 +69,7 @@ const cybersec: TeamMember[] = processMembers(data.cybersec)
 const opergroup: TeamMember[] = processMembers(data.opergroup)
 const publicity: TeamMember[] = processMembers(data.publicity)
 const secretariat: TeamMember[] = processMembers(data.secretariat)
+const friends: TeamMember[] = processMembers(data.friends)
 
 function processMembers(members: any[]): TeamMember[] {
   return members.map(member => ({
@@ -113,94 +114,60 @@ function getQQLink(uin: string) {
     link: 'http://wpa.qq.com/msgrd?v=3&uin=' + uin + '&site=qq&menu=yes'
   }
 }
-
-
-
-import { ref } from 'vue'
-
-// 处理特邀成员，保留原有的动态逻辑
-const friends = ref(processMembers(data.friends))
-
-fetch(['https://v1.hitokoto.cn/?c=a', 'https://v1.hitokoto.cn/?c=d',
-  'https://v1.hitokoto.cn/?c=k'][Math.random() * 2 | 0])
-  .then(response => response.json())
-  .then(data => {
-    const friendIndex = friends.value.findIndex(friend => friend.name === '255');
-    if (friendIndex !== -1) {
-      friends.value[friendIndex].desc = [
-        'is it that weird not wanting a label?',
-        'is it thawat wuwueird not wawanting a lawabel?',
-        data.from_who
-          ? `我没什么好说的。但是「${data.hitokoto}」${data.from}的${data.from_who}如是说。`
-          : `我不知道说点什么。但是「${data.hitokoto}」${data.from}这么说了。`
-      ][Math.random() * 3 | 0];
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching hitokoto:', error);
-    friends[0].desc = '这里本就没什么一言。';
-  });
 </script>
 
 <template>
   <VPTeamPage>
     <VPTeamPageTitle>
       <template #title>
-        协会成员
+        往届成员
       </template>
       <template #lead>
-        第{{ data.session || '九' }}届燕山大学大学生网络信息协会
+        第{{ data.session || '八' }}届燕山大学大学生网络信息协会
         <br>
-        <a href="/about-us/old-members" style="color: var(--vp-c-brand-1); text-decoration: none; font-size: 0.9em;">
-          查看往届成员 →
+        <a href="/about-us/members" style="color: var(--vp-c-brand-1); text-decoration: none; font-size: 0.9em;">
+          ← 返回现任成员
         </a>
       </template>
     </VPTeamPageTitle>
-    <VPTeamPageSection>
+    <VPTeamPageSection v-if="leaders.length > 0">
       <template #title>主席团</template>
-      <!-- <template #lead></template> -->
       <template #members>
         <VPTeamMembers :members="leaders" />
       </template>
     </VPTeamPageSection>
-    <VPTeamPageSection>
+    <VPTeamPageSection v-if="devbranch.length > 0">
       <template #title>开发部</template>
-      <!-- <template #lead></template> -->
       <template #members>
         <VPTeamMembers size="small" :members="devbranch" />
       </template>
     </VPTeamPageSection>
-    <VPTeamPageSection>
+    <VPTeamPageSection v-if="cybersec.length > 0">
       <template #title>网络安全部</template>
-      <!-- <template #lead></template> -->
       <template #members>
         <VPTeamMembers size="small" :members="cybersec" />
       </template>
     </VPTeamPageSection>
-    <VPTeamPageSection>
+    <VPTeamPageSection v-if="opergroup.length > 0">
       <template #title>运维部</template>
-      <!-- <template #lead></template> -->
       <template #members>
         <VPTeamMembers size="small" :members="opergroup" />
       </template>
     </VPTeamPageSection>
-    <VPTeamPageSection>
+    <VPTeamPageSection v-if="publicity.length > 0">
       <template #title>组宣部</template>
-      <!-- <template #lead></template> -->
       <template #members>
         <VPTeamMembers size="small" :members="publicity" />
       </template>
     </VPTeamPageSection>
-    <VPTeamPageSection>
+    <VPTeamPageSection v-if="secretariat.length > 0">
       <template #title>秘书处</template>
-      <!-- <template #lead></template> -->
       <template #members>
         <VPTeamMembers size="small" :members="secretariat" />
       </template>
     </VPTeamPageSection>
-    <VPTeamPageSection>
+    <VPTeamPageSection v-if="friends.length > 0">
       <template #title>特邀成员</template>
-      <!-- <template #lead></template> -->
       <template #members>
         <VPTeamMembers size="small" :members="friends" />
       </template>
