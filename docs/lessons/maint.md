@@ -14,6 +14,7 @@ next: true
 - 主题：Linux命令行和文件操作
 - 录播视频：**由于部门忘记开启会议录制，本次授课暂无回放，附上授课讲义。**
 - 授课资料：<a class="link-button" href="/activates/ops/第一课：命令行与文件操作.pdf" download="第一课：命令行与文件操作.pdf" rel="noopener noreferrer">点击下载</a>
+
 ## 历次授课
 
 - 时间：2025/10/18
