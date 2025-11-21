@@ -20,7 +20,7 @@ outline: [2, 3]
 
 #### 课程内容
 
-CTFweb内容的SQL与木马初探
+Reverse
 
 #### 附件
 
